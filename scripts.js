@@ -306,11 +306,16 @@ function editCardContent(card, show) {
 // This calls the addCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", showCards);
 
-function removeLastCard() {
+function showLess() {
   if (cardsToShow > 0) {
     cardsToShow -= 1; 
     showCards();     
   } 
+}
+
+function removeLastCard() {
+  tvShows.pop();
+  showCards();
 }
 
 function showMoreCards() {
