@@ -321,18 +321,23 @@ function removeLastCard() {
 
 function showMoreCards() {
 
-  if (cardsToShow < 0) {
-    cardsToShow = 3;
-  } else {
+  // if (cardsToShow < 0) {
+  //   cardsToShow = 3;
+  // } else {
 
-    cardsToShow += 3;
-  }
+  //   cardsToShow += 3;
+  // }
 
-  if (cardsToShow > tvShows.length) {
-    cardsToShow = tvShows.length;
-  }
+  // if (cardsToShow > tvShows.length) {
+  //   cardsToShow = tvShows.length;
+  // }
 
-  showCards(); 
+  //another method
+  tvShows.slice(cardsToShow, cardsToShow+=cardsToShow);
+  //console.log("Show More Button is pressed");
+  showCards();
+  
+ 
 }
 
 function alphabetize() {
