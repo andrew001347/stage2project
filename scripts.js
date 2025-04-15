@@ -307,17 +307,18 @@ function editCardContent(card, show) {
 document.addEventListener("DOMContentLoaded", showCards);
 
 function showLess() {
-  if (cardsToShow > 0) {
+  if (cardsToShow > 0 || cardsToShow>tvShows.length) {
     cardsToShow -= 1; 
     showCards();     
   } 
 }
 
 function removeLastCard() {
-  if (cardsToShow >= tvShows.length){
+  if (cardsToShow > tvShows.length){
     cardsToShow = tvShows.length;
 
     cardsToShow-1;
+    showCards();
 
   }
   else{
