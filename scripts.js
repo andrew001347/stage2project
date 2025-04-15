@@ -314,10 +314,19 @@ function showLess() {
 }
 
 function removeLastCard() {
+  if (cardsToShow >= tvShows.length){
+    cardsToShow = tvShows.length;
+
+    cardsToShow-1;
+
+  }
+  else{
   tvShows.splice(cardsToShow - 1,1);
   cardsToShow -= 1;
+  }
   showCards();
 }
+
 
 function showMoreCards() {
 
@@ -333,7 +342,13 @@ function showMoreCards() {
   // }
 
   //another method
-  tvShows.slice(cardsToShow, cardsToShow+=cardsToShow);
+  tvShows.slice(cardsToShow, cardsToShow+3);
+  if (cardsToShow > tvShows.length) {
+      cardsToShow = tvShows.length;
+  }
+  else{
+    cardsToShow += 3
+  }
   //console.log("Show More Button is pressed");
   showCards();
   
