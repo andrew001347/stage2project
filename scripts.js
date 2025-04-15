@@ -314,7 +314,8 @@ function showLess() {
 }
 
 function removeLastCard() {
-  tvShows.pop();
+  tvShows.splice(cardsToShow - 1,1);
+  cardsToShow -= 1;
   showCards();
 }
 
