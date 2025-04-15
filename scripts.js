@@ -25,7 +25,7 @@
 
 
 //creating array of object literals
-const tvShows = [ 
+let tvShows = [ 
 {title: "Fresh Prince of Bel Air",
  imgURL:"https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg",
  bulletPoints:[
@@ -377,7 +377,9 @@ function addShows() {
     bulletPoints: [bp1, bp2, bp3],
     link: wikiLink
   };
-
-  tvShows.push(newShow);
+  tvShows.splice(cardsToShow, 0, newShow)
+  cardsToShow++;
+  
   showCards();
+  
 }
